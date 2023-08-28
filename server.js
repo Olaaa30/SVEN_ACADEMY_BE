@@ -4,7 +4,11 @@ const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const app = express();
 const api = process.env.API_URL;
+const cors = require('cors');
 const mongoose = require("mongoose");
+
+app.use(cors());
+app.options('*', cors());
 
 //Routes
 const programRoutes = require('./Routes/program');
