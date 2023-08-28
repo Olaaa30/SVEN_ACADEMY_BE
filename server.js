@@ -7,8 +7,8 @@ const api = process.env.API_URL;
 const mongoose = require("mongoose");
 
 //Routes
-const programRoutes = require('Routes/program')
-const categoriesRoutes = require('Routes/categories.js');
+const programRoutes = require('./Routes/program');
+const categoriesRoutes = require('./Routes/categories.js');
 
 
 //middleware
