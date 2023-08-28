@@ -7,12 +7,16 @@ const api = process.env.API_URL;
 const mongoose = require("mongoose");
 
 //Routes
-const programRouter = require('./routers/program')
+const programRoutes = require('Routes/program')
+const categoriesRoutes = require('Routes/categories.js');
 
 
+//middleware
 app.use(morgan("tiny"));
 app.use(bodyParser.json());
-app.use(`${api}/programs`, programRouter);
+app.use(`${api}/programs`, programRoutes);
+app.use(`${api}/categories`, categoriesRoutes);
+
 
 mongoose
   .connect(process.env.DB_HOST)
