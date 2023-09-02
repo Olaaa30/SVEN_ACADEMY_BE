@@ -19,4 +19,4 @@ const categorySchema = mongoose.Schema({
   categorySchema.set('toJSON', {
     virtuals: true,
   })
-exports.Category = mongoose.model("Program", categorySchema);
+exports.Category = mongoose.model("Category", categorySchema);

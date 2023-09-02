@@ -8,6 +8,15 @@ const programSchema = mongoose.Schema({
       required: true,
     },
     image: String,
+    price: {
+      type: Number,
+      default: 0,
+    },
+    category: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Category',
+      required: true,
+    },
     dateCreated: { type: Date, default: Date.now },
   });
   
